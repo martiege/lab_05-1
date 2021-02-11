@@ -3,7 +3,7 @@
 Eigen::Vector3d CartesianPosition::toVector()
 {
   // Todo 2.1: Implement this correctly.
-  return Eigen::Vector3d::Zero();
+  return {x, y, z};
 }
 
 std::istream& operator>>(std::istream& is, CartesianPosition& pos)

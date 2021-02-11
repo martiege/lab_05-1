@@ -4,7 +4,9 @@
 Eigen::Quaterniond Attitude::toQuaternion() const
 {
   // Todo 1.1: Implement this correctly using Eigen::AngleAxisd (Z->Y->X).
-  return Eigen::Quaterniond(Eigen::AngleAxisd(0.0, Eigen::Vector3d::UnitX()));
+  return Eigen::AngleAxisd(z_rot, Eigen::Vector3d::UnitZ()) * 
+         Eigen::AngleAxisd(y_rot, Eigen::Vector3d::UnitY()) * 
+         Eigen::AngleAxisd(x_rot, Eigen::Vector3d::UnitZ()); 
 }
 
 Sophus::SO3d Attitude::toSO3() const

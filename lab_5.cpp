@@ -35,7 +35,7 @@ void Lab5::run()
 
     // Todo 1.2: Add body coordinate axes to 3d viewer.
     // Add body coordinate axes to the 3D viewer.
-
+    viewer.addBodyAxes(pose_local_body, element.img_num); 
 
     // Todo 2: Compute the pose of the camera
     // Todo 2.1: Finish CartesianPosition::toVector(),
